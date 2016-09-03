@@ -86,10 +86,17 @@
 <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
 <script>
     $(function () {
+        var timer1;
         $("#menu > ul > li").mouseover(function () {
-            $(this).find('ul').css('display', 'block');
+            var _self = $(this);
+            timer = setTimeout(function () {
+                _self.find('ul').show(100);
+            }, 200);
+
         }).mouseleave(function () {
-            $(this).find('ul').css('display', 'none');
+            var _self = $(this);
+            clearTimeout(timer);
+            _self.find('ul').hide(100);
         });
     });
 </script>
