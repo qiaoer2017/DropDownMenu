@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        #menu {
+            width: 600px;
+            height: 40px;
+            margin: 0 auto;
+        }
+
+        #menu > ul {
+            height: 40px;
+        }
+
+        li {
+            background: #eeeeee;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        a:hover {
+            background: #999;
+            color: #fff;
+        }
+
+        #menu > ul > li {
+            float: left;
+            width: 20%;
+        }
+
+        #menu > ul > li:hover > ul {
+            display: block;
+        }
+
+        #menu > ul > li > ul {
+            display: none;
+        }
+
+        #menu > ul > li > ul > li {
+            border-top: 2px solid #fff;
+        }
+
+        a {
+            width: 100%;
+            height: 100%;
+            color: #333;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="menu">
+    <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">课程大厅</a>
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+            </ul>
+        </li>
+        <li><a href="#">学习中心</a>
+            <ul>
+                <li><a href="#">视频学习</a></li>
+                <li><a href="#">案例学习</a></li>
+                <li><a href="#">交流平台</a></li>
+            </ul>
+        </li>
+        <li><a href="#">经典案例</a></li>
+        <li><a href="#">关于我们</a></li>
+    </ul>
+</body>
+</html>
