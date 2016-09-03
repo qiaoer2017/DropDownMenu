@@ -41,6 +41,10 @@
             width: 20%;
         }
 
+        #menu > ul > li > ul {
+            display: none;
+        }
+
         #menu > ul > li > ul > li {
             border-top: 2px solid #fff;
         }
@@ -77,5 +81,25 @@
         <li><a href="#">关于我们</a></li>
     </ul>
 </div>
+
+<script>
+    window.onload = function () {
+        var lists = document.getElementsByTagName("li");
+        for (var i = 0; i < lists.length; i++) {
+            lists[i].onmouseover = function () {
+                var ul = this.getElementsByTagName("ul")[0];
+                if (ul) {
+                    ul.style.display = "block";
+                }
+            };
+            lists[i].onmouseleave = function () {
+                var ul = this.getElementsByTagName("ul")[0];
+                if (ul) {
+                    ul.style.display = "none";
+                }
+            };
+        }
+    };
+</script>
 </body>
 </html>
